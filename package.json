@@ -1,0 +1,23 @@
+{
+  "name": "file-sharing-app",
+  "version": "1.0.0",
+  "description": "Simple file sharing web app with drag and drop file upload",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adishrtv/file-sharing-app.git"
+  },
+  "author": "aditya shrivastava",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adishrtv/file-sharing-app/issues"
+  },
+  "homepage": "https://github.com/adishrtv/file-sharing-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
