@@ -32,9 +32,10 @@ body,
 body {
 	font-family: system-ui;
 	background: var(--main-bg-color);
-	height: 98vh;
-	justify-content: space-evenly;
-	overflow: hidden;
+	height: auto;
+	min-height: 100vh;
+	justify-content:space-between;
+	overflow: auto;
 	color: white;
 }
 
@@ -42,8 +43,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	position: absolute;
-	top: 0%;
 	text-align: center;
 	height: 15%;
 	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -60,16 +59,15 @@ body {
 } */
 
 #main-container {
-	position: absolute;
-	/* background-color: green; */
 	justify-content:space-around;
 	width: 100vw;
 	margin: auto;
+	margin-top: 5%;
 }
 
 .footer-container {
-	position: absolute;
-	bottom: 0%;
+	margin: auto;
+	margin-top: 5%;
 	width: 100%;
 	background-color:var(--header-footer);
 	height: 18%;
