@@ -1,59 +1,104 @@
 :root {
-	--main-bg-color: #212429;
+	--main-bg-color: #001529;
 	--light-blue: #3a9aed;
 	--border-color: #3a9aed;
 	--container-width: 500px;
+	--header-footer: #002140;
+}
+
+* {
+	margin: 0px;
+	padding:0px;
+}
+
+body,
+#main-container,
+.upload-container,
+.footer-container,
+.drop-zone {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+body,
+.upload-container,
+.drop-zone,
+.footer-container {
+	flex-direction: column;
 }
 
 body {
 	font-family: system-ui;
 	background: var(--main-bg-color);
 	height: 98vh;
+	justify-content: space-evenly;
 	overflow: hidden;
 	color: white;
 }
 
 .header-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	position: absolute;
-	top: 2%;
-	font-family: "Times New Roman", Times, serif;
-	font-size: 40px;
+	top: 0%;
+	text-align: center;
+	height: 15%;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: 55px;
+	width: 100%;
+	background-color:var(--header-footer);
+
+}
+
+/* .header-container span{
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 2%;
+} */
+
+#main-container {
+	position: absolute;
+	/* background-color: green; */
+	justify-content:space-around;
+	width: 100vw;
+	margin: auto;
 }
 
 .footer-container {
 	position: absolute;
-	top: 2%;
-	left: 80%;
+	bottom: 0%;
+	width: 100%;
+	background-color:var(--header-footer);
+	height: 15%;
+	justify-content:space-betweens;
 }
 
-.logo {
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	width: 150px;
+.footer-container .details {
+	margin-top: 0.5%;
+	margin-bottom: 0px;
+}
+
+.footer-container .details h3 {
+	font-size: 25px;
+}
+
+.footer-container .details p {
+	font-size: 20px;
 }
 
 .image-vector {
 	width: 50vw;
 	height: 50vh;
+	flex-shrink: 1;
 	background: url(/undraw-upload.svg) no-repeat center;
 	background-size: contain;
 }
 
-body,
-.upload-container,
-.drop-zone {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.upload-container,
-.drop-zone {
-	flex-direction: column;
-}
-
 .upload-container {
-	background: #17191c;
+	background: var(--header-footer);
 	border-radius: 25px;
 }
 
@@ -263,9 +308,8 @@ body,
 
 .toast {
 	position: absolute;
-	bottom: 10px;
-	right: 50%;
-	transform: translate(50%, 60px);
+	top: 10px;
+	transform: translate(0%, -60px);
 	padding: 10px 20px;
 	background: var(--light-blue);
 	color: #fff;
@@ -273,7 +317,7 @@ body,
 	font-size: 18px;
 	box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
 		0px 4px 6px -2px rgba(0, 0, 0, 0.05);
-	transition: transform ease-in-out 0.2s;
+	transition: transform ease-in-out 0.5s;
 }
 
 .image-vector {
@@ -284,7 +328,7 @@ body,
 }
 
 .show.toast {
-	transform: translate(50%, 0);
+	transform: translate(0%, 150px);
 }
 
 @media screen and (max-width: 900px) {

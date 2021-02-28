@@ -146,7 +146,6 @@ emailForm.addEventListener("submit", (e) => {
 	// disable the button
 	emailForm[2].setAttribute("disabled", "true");
 	emailForm[2].innerText = "Sending";
-
 	const url = fileURL.value;
 
 	const formData = {
@@ -167,6 +166,7 @@ emailForm.addEventListener("submit", (e) => {
 			console.log(data);
 			if (data.success) {
 				showToast("Email Sent");
+				emailForm.reset();
 				sharingContainer.style.display = "none"; // hide the box
 			}
 		});
