@@ -44,19 +44,13 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-	height: 15%;
+	height: 15vh;
 	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	font-size: 55px;
 	width: 100%;
 	background-color:var(--header-footer);
 
 }
-
-/* .header-container span{
-	display: inline-block;
-	vertical-align: middle;
-	margin-top: 2%;
-} */
 
 #main-container {
 	justify-content:space-around;
@@ -66,11 +60,11 @@ body {
 }
 
 .footer-container {
-	margin: auto;
+	/* margin: auto; */
 	margin-top: 5%;
 	width: 100%;
 	background-color:var(--header-footer);
-	height: 18%;
+	height: 15vh;
 	justify-content:space-betweens;
 }
 
@@ -326,7 +320,7 @@ body {
 }
 
 .show.toast {
-	transform: translate(0%, 300%);
+	transform: translate(0%, 350%);
 }
 
 @media screen and (max-width: 900px) {
