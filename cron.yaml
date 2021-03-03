@@ -1,0 +1,4 @@
+cron:
+    - description: "daily deleting job"
+      url: /schedule/schedular
+      schedule: every 24 hours

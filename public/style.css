@@ -32,10 +32,9 @@ body,
 body {
 	font-family: system-ui;
 	background: var(--main-bg-color);
-	height: auto;
 	min-height: 100vh;
 	justify-content:space-between;
-	overflow: auto;
+	overflow-y:auto;
 	color: white;
 }
 
@@ -44,7 +43,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-	height: 15vh;
+	height: 17vh;
 	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	font-size: 55px;
 	width: 100%;
@@ -61,10 +60,11 @@ body {
 
 .footer-container {
 	/* margin: auto; */
+	padding-top: 1%;
 	margin-top: 5%;
 	width: 100%;
 	background-color:var(--header-footer);
-	height: 15vh;
+	height: 17vh;
 	justify-content:space-betweens;
 }
 
@@ -79,14 +79,6 @@ body {
 
 .footer-container .details p {
 	font-size: 20px;
-}
-
-.image-vector {
-	width: 50vw;
-	height: 50vh;
-	flex-shrink: 1;
-	background: url(/undraw-upload.svg) no-repeat center;
-	background-size: contain;
 }
 
 .upload-container {
@@ -315,8 +307,8 @@ body {
 .image-vector {
 	background: url("./undraw_going_up_ttm5.svg") no-repeat center;
 	background-size: contain;
-	height: 50vh;
-	width: 50vw;
+	height: 40vh;
+	width: 40vw;
 }
 
 .show.toast {
