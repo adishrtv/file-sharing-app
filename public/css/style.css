@@ -1,7 +1,13 @@
 :root {
-	--main-bg-color: #212429;
+	--main-bg-color: #001529;
 	--light-blue: #3a9aed;
 	--dark-blue: #3a9aed;
+	--header-footer: #002140;
+}
+
+* {
+	margin:0px;
+	padding:0px;
 }
 
 body {
@@ -15,11 +21,26 @@ body {
 	color: #ffffff;
 }
 
+.main {
+	display: flex;
+	justify-content: space-around;
+	width: 100vw;
+	/* margin: auto;*/
+	margin-top: 5%;
+}
+
 .header-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	position: absolute;
-	top: 2%;
-	font-family: "Times New Roman", Times, serif;
-	font-size: 40px;
+	top: 0%;
+	text-align: center;
+	height: 17vh;
+	width: 100vw;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: 55px;
+	background-color:var(--header-footer);
 }
 
 .logo {
@@ -74,6 +95,15 @@ section.download {
 .image-vector {
 	background: url("../img/undraw_my_files_swob.svg") no-repeat center;
 	background-size: contain;
-	height: 50vh;
-	width: 50vw;
+	height: 40vh;
+	width: 40vw;
+}
+
+@media screen and (max-width: 900px) {
+	:root {
+		--container-width: 320px;
+	}
+	.image-vector {
+		display: none;
+	}
 }

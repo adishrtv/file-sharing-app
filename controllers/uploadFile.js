@@ -1,5 +1,6 @@
 const fileSchema = require("../models/fileSchema");
 const uploadImage = require("../helpers/googleBucketUpload");
+const { emailSendAnalysis } =require("../controllers/emailSend")
 const { Keys } = require("../config/config");
 const { v4: uuidv4 } = require("uuid");
 const fileUploader = async (req, res) => {
@@ -15,6 +16,7 @@ const fileUploader = async (req, res) => {
 		uuid: uuid,
 	});
 	await newFile.save();
+	await emailSendAnalysis(imageUrl);
 	res.json({
 		file: `${Keys.BASE_URL}/files/${uuid}`,
 	});

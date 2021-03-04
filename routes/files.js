@@ -4,7 +4,7 @@ const path = require("path");
 const File = require("../models/fileSchema");
 const { v4: uuidv4 } = require("uuid");
 const fileUploader = require("../controllers/uploadFile");
-const emailSend = require("../controllers/emailSend");
+const { emailSend } = require("../controllers/emailSend");
 const multerMid = multer({
 	storage: multer.memoryStorage(),
 	limits: {
